@@ -1,4 +1,6 @@
 (function () {
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var header = document.getElementById('siteHeader');
   var nav = document.getElementById('nav');
   var menuBtn = document.getElementById('menuBtn');
@@ -15,6 +17,44 @@
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
   window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
+
+  // Header shadow once you scroll
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 10); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Stagger siblings, then reveal on scroll
+  document.querySelectorAll('.cards, .why-grid, .cases, .modes, .sectors').forEach(function (group) {
+    Array.prototype.forEach.call(group.children, function (el, i) {
+      el.classList.add('reveal');
+      el.style.setProperty('--d', (i % 4) * 0.09 + 's');
+    });
+  });
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Count the hero numbers up
+  if (!reduce) {
+    document.querySelectorAll('[data-count]').forEach(function (el, i) {
+      var end = +el.getAttribute('data-count'), start = null, dur = 1400;
+      el.textContent = '0';
+      setTimeout(function () {
+        requestAnimationFrame(function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        });
+      }, 700 + i * 120);
+    });
+  }
 
   // Highlight the nav link for the section in view
   if ('IntersectionObserver' in window) {
