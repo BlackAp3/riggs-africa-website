@@ -24,7 +24,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // Stagger siblings, then reveal on scroll
-  document.querySelectorAll('.svc-list, .sectors, .cases, .team').forEach(function (group) {
+  document.querySelectorAll('.svc-list, .sectors, .cases, .insights').forEach(function (group) {
     Array.prototype.forEach.call(group.children, function (el, i) {
       el.classList.add('reveal');
       el.style.setProperty('--d', (i % 4) * 0.09 + 's');
@@ -74,7 +74,7 @@
         links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['about', 'services', 'approach', 'industries', 'people', 'results', 'contact'].forEach(function (id) {
+    ['about', 'services', 'approach', 'industries', 'results', 'people', 'insights', 'contact'].forEach(function (id) {
       var s = document.getElementById(id); if (s) spy.observe(s);
     });
   }
