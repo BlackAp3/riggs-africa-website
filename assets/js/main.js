@@ -24,11 +24,18 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // Stagger siblings, then reveal on scroll
-  document.querySelectorAll('.cards, .why-grid, .cases, .modes, .sectors').forEach(function (group) {
+  document.querySelectorAll('.svc-list, .sectors, .cases, .team').forEach(function (group) {
     Array.prototype.forEach.call(group.children, function (el, i) {
       el.classList.add('reveal');
       el.style.setProperty('--d', (i % 4) * 0.09 + 's');
     });
+  });
+
+  // If a photo can't load, drop it so the patterned frame shows instead
+  document.querySelectorAll('.ph img').forEach(function (img) {
+    function drop() { img.remove(); }
+    if (img.complete && img.naturalWidth === 0) drop();
+    else img.addEventListener('error', drop);
   });
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduce) {
@@ -40,20 +47,22 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Count the hero numbers up
-  if (!reduce) {
-    document.querySelectorAll('[data-count]').forEach(function (el, i) {
-      var end = +el.getAttribute('data-count'), start = null, dur = 1400;
-      el.textContent = '0';
-      setTimeout(function () {
+  // Count numbers up when they come into view
+  if (!reduce && 'IntersectionObserver' in window) {
+    var counter = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        counter.unobserve(en.target);
+        var el = en.target, end = +el.getAttribute('data-count'), start = null, dur = 1400;
         requestAnimationFrame(function step(ts) {
           if (!start) start = ts;
           var p = Math.min((ts - start) / dur, 1);
           el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
           if (p < 1) requestAnimationFrame(step);
         });
-      }, 700 + i * 120);
-    });
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(function (el) { el.textContent = '0'; counter.observe(el); });
   }
 
   // Highlight the nav link for the section in view
@@ -65,7 +74,7 @@
         links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['services', 'approach', 'industries', 'training', 'contact'].forEach(function (id) {
+    ['about', 'services', 'approach', 'industries', 'people', 'results', 'contact'].forEach(function (id) {
       var s = document.getElementById(id); if (s) spy.observe(s);
     });
   }
