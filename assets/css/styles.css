@@ -105,7 +105,7 @@ a:hover { color: var(--copper-text); }
 /* Frameworks */
 .frameworks { padding-top: 16px; padding-bottom: 64px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
 .small-title { font-size: 18px; font-weight: 700; }
-.fw-row { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.fw-row { width: 100%; }
 .fw-track { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .chip { display: inline-flex; align-items: center; justify-content: center; height: 64px; padding: 0 26px; border: 1px solid var(--line-2); border-radius: 14px; font-weight: 600; font-size: 16px; color: var(--ink-2); white-space: nowrap; background: #fff; transition: border-color .25s, translate .25s; }
 .chip:hover { border-color: var(--ink); translate: 0 -2px; }
@@ -270,12 +270,12 @@ body.bar-off { padding-bottom: 0; }
   .mega-btn { font-size: 12px; gap: 6px; }
   .intro { padding: calc(var(--head-h) + 32px) 0 32px; }
   .intro h1 { text-align: left; margin-bottom: 24px; }
-  .track { padding: 4px 20px; gap: 14px; }
+  .track { padding: 4px 20px; gap: 14px; scroll-padding-left: 20px; }
+  .ban { scroll-snap-align: start; }
   .ban { width: 82vw; max-width: 320px; height: 300px; padding: 24px; }
   .ban-body h2 { font-size: 26px; }
   .arrow-l, .arrow-r { display: none; }
   .frameworks { align-items: flex-start; padding-bottom: 48px; }
-  .fw-row { -webkit-mask-image: none; mask-image: none; }
   .fw-track { justify-content: flex-start; gap: 10px; }
   .chip { height: 48px; padding: 0 16px; font-size: 14px; }
   .split1 { padding-top: 56px; padding-bottom: 56px; }
