@@ -34,6 +34,7 @@
     if (nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
   });
 
+  if ($('banTrack')) {
   /* Offers carousel */
   var track = $('banTrack'), bar = $('banBar'), count = $('banCount');
   var cards = Array.prototype.slice.call(track.children);
@@ -71,6 +72,7 @@
     track.addEventListener('touchstart', function () { paused = true; }, { passive: true });
     setInterval(function () { if (!paused && !document.hidden) go(1); }, 5500);
   }
+  }
 
   /* If a photo can't load, drop it so the patterned frame shows */
   document.querySelectorAll('.ph img').forEach(function (img) {
@@ -78,6 +80,7 @@
     if (img.complete && img.naturalWidth === 0) drop(); else img.addEventListener('error', drop);
   });
 
+  if (document.querySelector('.testi-body')) {
   /* Testimonials (placeholders until real, approved quotes arrive) */
   var ts = [
     { org: '[Client organisation]', quote: '[Client testimonial — what Riggs Africa delivered, in one or two sentences.]', name: '[Client name], [Title]' },
@@ -98,9 +101,10 @@
   $('tPrev').addEventListener('click', function () { showT(ti - 1); });
   $('tNext').addEventListener('click', function () { showT(ti + 1); });
   showT(0);
+  }
 
   /* Reveal on scroll + stagger grids */
-  document.querySelectorAll('.prog-grid, .ways, .sectors, .offices').forEach(function (g) {
+  document.querySelectorAll('.prog-grid, .ways, .sectors, .offices, .cgrid, .how, .deliver').forEach(function (g) {
     g.classList.add('stagger');
     Array.prototype.forEach.call(g.children, function (el, i) { el.style.setProperty('--d', (i * 0.05) + 's'); });
   });
@@ -136,23 +140,24 @@
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
+        links.forEach(function (a) { var h = a.getAttribute('href'); a.classList.toggle('active', h.slice(h.indexOf('#')) === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['programmes', 'ways', 'industries', 'contact'].forEach(function (id) { var s = $(id); if (s) spy.observe(s); });
+    if (!document.body.classList.contains('sub')) ['programmes', 'ways', 'industries', 'contact'].forEach(function (id) { var s = $(id); if (s) spy.observe(s); });
   } else {
     watch.forEach(function (el) { el.classList.add('in', 'done'); });
   }
 
   /* Floating call-back pill: steps aside while the form is on screen */
   var pill = $('cbBar');
-  if ('IntersectionObserver' in window) {
+  if (pill && $('callback') && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) { pill.classList.toggle('hide', entries[0].isIntersecting); }, { threshold: 0.15 }).observe($('callback'));
   }
 
   /* Footer year */
   var y = $('year'); if (y) y.textContent = new Date().getFullYear();
 
+  if ($('contactForm')) {
   /* Call-back form */
   var form = $('contactForm'), status = $('formStatus');
   function setStatus(msg, kind) { status.textContent = msg; status.className = 'form-status ' + (kind || ''); }
@@ -180,4 +185,6 @@
       .catch(function () { setStatus('Something went wrong. Please call +254 716 845 482 or email info@riggsafrica.com.', 'err'); })
       .then(function () { btn.disabled = false; });
   });
+  }
+
 })();

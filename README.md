@@ -39,3 +39,32 @@ To receive submissions directly:
 - Laptop/desktop: above 1080px
 - Tablet: 721–1080px (menu button, two-column grids)
 - Mobile: 720px and below (single column)
+
+## Courses and booking
+
+```
+data/courses.json        all course content: modules, outcomes, audience, session dates
+tools/build.py           turns courses.json into the pages below
+courses/index.html       catalogue with search and filters   -> /courses
+courses/<slug>.html      one page per course                 -> /courses/<slug>
+book.html                booking form                        -> /book
+sitemap.xml, robots.txt  for Google
+```
+
+### Edit a course, add dates or add a new course
+1. Edit `data/courses.json` (dates are `YYYY-MM-DD`; `days` sets the session length, weekends are skipped).
+2. Run `python3 tools/build.py` from the project root. It also refreshes the six
+   "Programmes in demand" cards on the home page (list in `FEATURED` inside `tools/build.py`).
+3. Commit the changed files and push.
+
+Do not hand-edit the generated files above; they are overwritten on every build.
+
+### Bookings
+- Prices are not shown: fees are quoted after booking, based on organisation type and group size.
+- Until a form service is connected, "Send booking request" opens the visitor's email app with the booking
+  filled in (to info@riggsafrica.com), shows a reference number, and offers WhatsApp as a backup.
+- To receive bookings directly, create a Formspree form and replace `YOUR_FORM_ID` in `tools/build.py`
+  (booking form) and in `index.html` (call-back form), then rebuild.
+
+### Run locally
+`npx serve .` gives the same clean URLs as Vercel (`/courses`, `/book`).

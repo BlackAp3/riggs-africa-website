@@ -1,0 +1,457 @@
+{
+  "_note": "Edit this file to change courses, then run: python3 tools/build.py. Session dates are provisional until Riggs Africa confirms them.",
+  "categories": [
+    {"id": "risk", "name": "Risk & Governance"},
+    {"id": "audit", "name": "Internal Audit & Assurance"},
+    {"id": "tech", "name": "Technology & Data"},
+    {"id": "finance", "name": "Finance & Performance"},
+    {"id": "board", "name": "Board & Leadership"},
+    {"id": "health", "name": "Healthcare"}
+  ],
+  "courses": [
+    {
+      "slug": "enterprise-risk-management-foundations",
+      "title": "Enterprise Risk Management: Foundations",
+      "category": "risk",
+      "level": "Foundation",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1573497701240-345a300b8d36",
+      "summary": "Build a shared language for risk and learn how to identify, assess and respond to the risks that matter to your objectives.",
+      "overview": "Most organisations have risk registers; far fewer use risk to make better decisions. This two-day programme gives managers and staff a practical grounding in enterprise risk management (ERM): what it is, why it matters, and how it connects strategy, objectives and day-to-day work. Participants leave able to contribute confidently to their organisation's risk process.",
+      "audience": ["Managers and supervisors", "Heads of department", "Risk champions", "Compliance officers", "New risk and audit staff"],
+      "outcomes": [
+        "Explain ERM and how it links to strategy and objectives",
+        "Identify risks using structured techniques",
+        "Assess likelihood and impact on a consistent scale",
+        "Choose appropriate risk responses and owners",
+        "Read and contribute to a useful risk register",
+        "Understand roles across the Three Lines Model"
+      ],
+      "modules": [
+        {"title": "Why risk management matters", "topics": ["Risk, uncertainty and opportunity", "The cost of unmanaged risk: real-world failures", "Risk management as a decision-making tool"]},
+        {"title": "ERM frameworks at a glance", "topics": ["ISO 31000 principles, framework and process", "COSO ERM: integrating with strategy and performance", "Choosing and tailoring a framework"]},
+        {"title": "Objectives come first", "topics": ["Linking risks to strategic and operational objectives", "Risk appetite and tolerance in plain terms", "Setting context for risk assessment"]},
+        {"title": "Identifying risks", "topics": ["Workshops, interviews and process walk-throughs", "Writing clear risk statements: cause, event, consequence", "Emerging and interconnected risks"]},
+        {"title": "Assessing and prioritising risks", "topics": ["Likelihood and impact scales", "Inherent vs residual risk", "Heat maps and their limits"]},
+        {"title": "Responding to risks", "topics": ["Avoid, reduce, share, accept", "Designing controls and action plans", "Risk ownership and accountability"]},
+        {"title": "Monitoring and reporting", "topics": ["Key risk indicators (KRIs)", "Risk reporting to management and the board", "Building a risk-aware culture"]}
+      ],
+      "sessions": [
+        {"start": "2027-01-19", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-03-16", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-05-18", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "enterprise-risk-management-practical-approach",
+      "title": "Enterprise Risk Management: A Practical Approach (Level 2)",
+      "category": "risk",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "In-house"],
+      "image": "photo-1580894732444-8ecded7900cd",
+      "summary": "Move from theory to practice: embed ERM into planning, decisions and performance with an implementation roadmap and KPIs.",
+      "overview": "ERM is a journey, not a one-off training event. Building on foundation concepts, this hands-on programme focuses on implementation: aligning existing structures with ERM, running effective risk workshops, defining KPIs and making risk part of everyday management decisions. Participants work on their own organisation's risks throughout.",
+      "audience": ["Senior managers", "Risk and compliance managers", "Heads of department", "Internal auditors", "Participants who completed ERM Foundations"],
+      "outcomes": [
+        "Design a practical ERM implementation roadmap",
+        "Facilitate risk workshops that produce useful results",
+        "Integrate risk into planning and budgeting",
+        "Define KRIs and ERM performance measures",
+        "Analyse root causes and interconnected risks",
+        "Strengthen risk culture and ownership"
+      ],
+      "modules": [
+        {"title": "From framework to practice", "topics": ["Common reasons ERM programmes stall", "Aligning ERM with existing governance structures", "Maturity assessment of your current ERM"]},
+        {"title": "Advanced risk identification", "topics": ["Bow-tie analysis", "Scenario analysis and stress testing basics", "Risk interconnections and cascading events"]},
+        {"title": "Risk analysis and prioritisation", "topics": ["Control effectiveness ratings", "Velocity and proximity of risks", "Prioritising with limited resources"]},
+        {"title": "Treatment and action planning", "topics": ["SMART risk action plans", "Cost–benefit of controls", "Tracking implementation"]},
+        {"title": "Embedding risk in decisions", "topics": ["Risk in strategy, projects and procurement", "Risk-adjusted decision making", "Integrating risk with performance management"]},
+        {"title": "Measuring and sustaining ERM", "topics": ["ERM KPIs and KRIs", "Risk reporting that boards read", "An iterative implementation roadmap"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-16", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-06-15", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "iso-31000-risk-management",
+      "title": "ISO 31000 Risk Management in Practice",
+      "category": "risk",
+      "level": "Intermediate",
+      "days": 3,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1573164574511-73c773193279",
+      "summary": "Apply the ISO 31000 principles, framework and process to design or strengthen a risk management system that fits your organisation.",
+      "overview": "ISO 31000 is the world's most widely used risk management standard. This programme walks through its principles, framework and process clause by clause, with case studies and exercises that show how to apply it in public, private and non-profit settings. Note: this is a practical application course, not an ISO certification exam.",
+      "audience": ["Risk managers and officers", "Quality and compliance professionals", "Internal auditors", "Project and operations managers"],
+      "outcomes": [
+        "Explain the ISO 31000 principles, framework and process",
+        "Assess an organisation's risk framework against the standard",
+        "Apply the risk process from context to monitoring",
+        "Integrate risk with ISO 9001, 27001 and other systems",
+        "Design risk policies, criteria and registers",
+        "Plan improvements to risk management maturity"
+      ],
+      "modules": [
+        {"title": "Introduction to ISO 31000", "topics": ["Purpose, scope and structure of the standard", "Key terms and definitions", "ISO 31000 and related standards (ISO 31010, ISO 31022)"]},
+        {"title": "The eight principles", "topics": ["Integrated, structured and customised", "Inclusive, dynamic and based on best information", "Human and cultural factors; continual improvement"]},
+        {"title": "The risk management framework", "topics": ["Leadership and commitment", "Integration, design and implementation", "Evaluation and improvement"]},
+        {"title": "Scope, context and criteria", "topics": ["Internal and external context", "Defining risk criteria", "Stakeholder communication and consultation"]},
+        {"title": "Risk assessment", "topics": ["Identification techniques from ISO 31010", "Analysis: qualitative and semi-quantitative", "Evaluation against criteria"]},
+        {"title": "Risk treatment", "topics": ["Selecting treatment options", "Treatment plans and residual risk", "Recording and reporting"]},
+        {"title": "Monitoring, review and maturity", "topics": ["Monitoring the framework and process", "Integrating with management systems", "Building a maturity improvement plan"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-09", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-04-13", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "coso-internal-control",
+      "title": "COSO Internal Control: Design & Assessment",
+      "category": "audit",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1573496267526-08a69e46a409",
+      "summary": "Use the COSO Internal Control framework's five components and 17 principles to design, document and assess effective controls.",
+      "overview": "Strong internal control protects assets, reporting and reputation. This programme explains the COSO 2013 Internal Control – Integrated Framework in practical terms and shows how to document processes, map risks to controls and assess whether controls are designed and operating effectively.",
+      "audience": ["Finance managers and accountants", "Internal auditors", "Compliance officers", "Process owners", "Audit committee members"],
+      "outcomes": [
+        "Explain the five COSO components and 17 principles",
+        "Build risk and control matrices",
+        "Distinguish preventive, detective, manual and automated controls",
+        "Test control design and operating effectiveness",
+        "Evaluate and report control deficiencies",
+        "Strengthen the control environment"
+      ],
+      "modules": [
+        {"title": "Internal control fundamentals", "topics": ["Objectives of internal control", "Limitations of internal control", "Roles and responsibilities"]},
+        {"title": "Control environment", "topics": ["Integrity and ethical values", "Board oversight and organisational structure", "Competence and accountability"]},
+        {"title": "Risk assessment and fraud risk", "topics": ["Specifying objectives", "Identifying and analysing risk", "Assessing fraud risk and change"]},
+        {"title": "Control activities", "topics": ["Selecting and developing controls", "IT general controls", "Policies and procedures"]},
+        {"title": "Information, communication and monitoring", "topics": ["Quality information", "Internal and external communication", "Ongoing and separate evaluations"]},
+        {"title": "Documenting and assessing controls", "topics": ["Process narratives and flowcharts", "Risk and control matrices (RCMs)", "Evaluating and reporting deficiencies"]}
+      ],
+      "sessions": [
+        {"start": "2027-03-02", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-05-11", "mode": "Virtual", "location": "Live online"}
+      ]
+    },
+    {
+      "slug": "risk-based-internal-auditing",
+      "title": "Risk-Based Internal Auditing",
+      "category": "audit",
+      "level": "Intermediate",
+      "days": 3,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1573164574397-dd250bc8a598",
+      "summary": "Plan and deliver audits that focus on the risks that matter, aligned with the Global Internal Audit Standards.",
+      "overview": "Risk-based auditing directs limited audit resources to the areas of greatest risk and value. This programme covers the full audit cycle — from the audit universe and annual plan to engagement planning, fieldwork, reporting and follow-up — using practical templates and case studies.",
+      "audience": ["Internal auditors and audit managers", "Heads of internal audit", "Risk and compliance staff", "External auditors moving into internal audit"],
+      "outcomes": [
+        "Build an audit universe and risk-based annual plan",
+        "Plan engagements around key risks and objectives",
+        "Design effective audit work programmes",
+        "Gather sufficient and reliable evidence",
+        "Write findings using criteria, condition, cause and effect",
+        "Follow up recommendations effectively"
+      ],
+      "modules": [
+        {"title": "The internal audit function today", "topics": ["Global Internal Audit Standards overview", "Independence and objectivity", "The Three Lines Model"]},
+        {"title": "Risk-based audit planning", "topics": ["Building the audit universe", "Risk assessment for the annual plan", "Aligning the plan with organisational strategy"]},
+        {"title": "Engagement planning", "topics": ["Understanding the area under review", "Engagement risk assessment", "Objectives, scope and work programmes"]},
+        {"title": "Fieldwork and evidence", "topics": ["Walk-throughs and process documentation", "Testing techniques and sampling", "Working papers and supervision"]},
+        {"title": "From exception to finding", "topics": ["Criteria, condition, cause, effect and significance", "Root-cause analysis", "Practical, value-adding recommendations"]},
+        {"title": "Reporting and communication", "topics": ["Writing clear audit reports", "Rating findings and overall opinions", "Communicating with management and the audit committee"]},
+        {"title": "Follow-up and quality", "topics": ["Tracking management actions", "Quality assurance and improvement", "Measuring audit performance"]}
+      ],
+      "sessions": [
+        {"start": "2027-01-26", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-04-20", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-07-13", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "leading-audit-engagements",
+      "title": "Leading Audit Engagements: Tools & Techniques",
+      "category": "audit",
+      "level": "Advanced",
+      "days": 3,
+      "formats": ["In-person", "In-house"],
+      "image": "photo-1600880292203-757bb62b4baf",
+      "summary": "For senior auditors stepping up to lead engagements: coaching teams, challenging evidence and maintaining audit quality.",
+      "overview": "Audit quality begins before fieldwork. This advanced programme equips senior auditors and audit leads with the tools to plan engagements well, supervise and coach teams, apply professional scepticism and turn exceptions into meaningful findings that management acts on.",
+      "audience": ["Senior auditors", "Audit team leads and managers", "Audit supervisors in firms and SACCOs", "Public sector audit staff"],
+      "outcomes": [
+        "Lead engagement planning and scoping",
+        "Use risk and control matrices and walk-throughs effectively",
+        "Design efficient test plans with data analytics",
+        "Supervise, coach and review working papers",
+        "Apply professional scepticism and judgement",
+        "Deliver findings that drive action"
+      ],
+      "modules": [
+        {"title": "The lead auditor's role", "topics": ["Coaching, challenging and supervising", "Audit governance and independence", "Managing stakeholders"]},
+        {"title": "Planning that pays off", "topics": ["Engagement risk assessment", "Defining clear audit criteria", "Resourcing and timelines"]},
+        {"title": "Process and control mapping", "topics": ["Walk-throughs", "Risk and control matrices", "Identifying key controls"]},
+        {"title": "Testing and evidence", "topics": ["Test plans and work programmes", "Sampling and data analytics", "Evaluating evidence quality"]},
+        {"title": "Findings and root causes", "topics": ["Criteria, condition, cause, effect and significance", "Root-cause techniques", "Recommendations management will implement"]},
+        {"title": "Quality and review", "topics": ["Reviewing working papers", "Professional scepticism and judgement", "Closing meetings and reporting"]}
+      ],
+      "sessions": [
+        {"start": "2027-03-09", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "it-audit-cyber-risk",
+      "title": "IT Audit & Cyber Risk Essentials",
+      "category": "tech",
+      "level": "Intermediate",
+      "days": 3,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1531482615713-2afd69097998",
+      "summary": "Understand IT general controls, cyber risk and how to audit technology — no programming background required.",
+      "overview": "Every business process now runs on technology. This programme gives auditors, risk and compliance professionals a working knowledge of IT governance, IT general controls and cyber risk, with practical audit programmes for access, change management, operations and third-party technology services.",
+      "audience": ["Internal and external auditors", "Risk and compliance staff", "IT managers", "Finance managers overseeing systems"],
+      "outcomes": [
+        "Explain IT governance and IT general controls",
+        "Assess access, change and operations controls",
+        "Understand common cyber threats and controls",
+        "Review backup, recovery and continuity arrangements",
+        "Assess third-party and cloud risks",
+        "Plan and report an IT audit"
+      ],
+      "modules": [
+        {"title": "IT governance foundations", "topics": ["COBIT and IT governance basics", "IT strategy and risk alignment", "Roles of IT, risk and audit"]},
+        {"title": "IT general controls (ITGCs)", "topics": ["Access management and segregation of duties", "Change management", "IT operations and job scheduling"]},
+        {"title": "Cybersecurity risk", "topics": ["Common threats: phishing, ransomware, insider risk", "Security controls and frameworks (ISO 27001, NIST CSF)", "Incident response"]},
+        {"title": "Application controls", "topics": ["Input, processing and output controls", "Interfaces and data integrity", "Testing application controls"]},
+        {"title": "Resilience and third parties", "topics": ["Backup and disaster recovery", "Cloud and outsourced services", "Vendor risk management"]},
+        {"title": "Planning and reporting an IT audit", "topics": ["Scoping an IT audit", "Evidence and tools", "Reporting technical findings in business language"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-23", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-06-08", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "data-analytics-for-auditors",
+      "title": "Data Analytics for Auditors & Risk Professionals",
+      "category": "tech",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1528901166007-3784c7dd3653",
+      "summary": "Use Excel and simple analytics to test whole populations, spot anomalies and build dashboards for audit and risk.",
+      "overview": "Analysing 100% of transactions finds what sampling misses. This hands-on programme teaches practical analytics in Excel — cleaning data, testing populations, detecting anomalies and building simple dashboards — and introduces continuous monitoring. Participants bring a laptop.",
+      "audience": ["Internal auditors", "Risk and compliance analysts", "Finance teams", "Fraud examiners"],
+      "outcomes": [
+        "Obtain and clean data for analysis",
+        "Test full populations with Excel functions and pivots",
+        "Detect duplicates, gaps and outliers",
+        "Apply Benford's Law and other fraud indicators",
+        "Build simple audit and risk dashboards",
+        "Design a continuous monitoring approach"
+      ],
+      "modules": [
+        {"title": "Why analytics", "topics": ["Sampling vs full-population testing", "Analytics across the audit cycle", "Getting data: requests and formats"]},
+        {"title": "Preparing data", "topics": ["Cleaning and validating data", "Joining tables and lookups", "Documenting data reliability"]},
+        {"title": "Core tests", "topics": ["Duplicates, gaps and outliers", "Pivots and summarisation", "Segregation of duties conflicts"]},
+        {"title": "Fraud analytics", "topics": ["Benford's Law", "Red-flag indicators", "Payroll and procurement tests"]},
+        {"title": "Dashboards and reporting", "topics": ["Visualising findings", "KRI dashboards", "Telling the story with data"]},
+        {"title": "Continuous monitoring", "topics": ["Repeatable scripts and templates", "Introduction to audit software tools", "Building an analytics roadmap"]}
+      ],
+      "sessions": [
+        {"start": "2027-03-23", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-05-25", "mode": "Virtual", "location": "Live online"}
+      ]
+    },
+    {
+      "slug": "ai-for-business",
+      "title": "AI for Business: Value & Governance",
+      "category": "tech",
+      "level": "All levels",
+      "days": 1,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1611432579402-7037e3e2c1e4",
+      "summary": "Where AI creates value today — and the risks leaders must govern. A practical, non-technical day for decision-makers.",
+      "overview": "AI tools are already in your organisation, whether planned or not. This one-day programme helps leaders separate hype from value, identify practical use cases, and put sensible governance in place for data privacy, accuracy, bias and accountability.",
+      "audience": ["Executives and senior managers", "Board members", "Risk, audit and compliance leaders", "IT and innovation teams"],
+      "outcomes": [
+        "Explain what today's AI can and cannot do",
+        "Identify high-value use cases in your organisation",
+        "Recognise key AI risks: privacy, accuracy, bias, security",
+        "Set out an AI policy and governance approach",
+        "Understand data protection obligations",
+        "Plan a safe first AI pilot"
+      ],
+      "modules": [
+        {"title": "AI in plain language", "topics": ["Generative AI, machine learning and automation", "What AI is good and bad at", "Live demonstrations"]},
+        {"title": "Finding value", "topics": ["Use cases in finance, audit, HR and customer service", "Prioritising by value and feasibility", "Measuring results"]},
+        {"title": "AI risks", "topics": ["Accuracy and hallucination", "Bias and fairness", "Security, confidentiality and data privacy"]},
+        {"title": "Governing AI", "topics": ["AI policies and acceptable use", "Roles of the board, management and audit", "Data protection obligations"]},
+        {"title": "Getting started", "topics": ["Designing a safe pilot", "Skills and change management", "Your 90-day action plan"]}
+      ],
+      "sessions": [
+        {"start": "2027-01-28", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-04-08", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "fraud-risk-management",
+      "title": "Fraud Risk Management & Investigations",
+      "category": "audit",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1600880292089-90a7e086ee0c",
+      "summary": "Prevent, detect and respond to fraud — from fraud risk assessment to running a sound investigation.",
+      "overview": "Fraud is cheaper to prevent than to recover. This programme covers how fraud happens, how to assess fraud risk, which controls deter and detect it, and how to handle allegations and investigations properly so that evidence stands up.",
+      "audience": ["Internal auditors", "Risk and compliance officers", "Finance and procurement managers", "HR and security staff"],
+      "outcomes": [
+        "Explain the fraud triangle and common schemes",
+        "Conduct a fraud risk assessment",
+        "Design anti-fraud controls and whistleblowing channels",
+        "Spot red flags in data and documents",
+        "Plan and run a basic investigation",
+        "Handle evidence and interviews properly"
+      ],
+      "modules": [
+        {"title": "Understanding fraud", "topics": ["The fraud triangle", "Occupational fraud schemes", "Corruption, procurement and payroll fraud"]},
+        {"title": "Fraud risk assessment", "topics": ["Identifying fraud scenarios", "Assessing controls against schemes", "Fraud risk registers"]},
+        {"title": "Prevention and detection", "topics": ["Anti-fraud controls", "Whistleblowing and hotlines", "Red flags and data analytics"]},
+        {"title": "Responding to allegations", "topics": ["Triage and escalation", "Legal and HR considerations", "Preserving evidence"]},
+        {"title": "Conducting investigations", "topics": ["Planning the investigation", "Document and digital evidence", "Interview techniques"]},
+        {"title": "Reporting and lessons learned", "topics": ["Investigation reports", "Recovery and disciplinary action", "Fixing control weaknesses"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-02", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-05-04", "mode": "Virtual", "location": "Live online"}
+      ]
+    },
+    {
+      "slug": "business-continuity-resilience",
+      "title": "Business Continuity & Operational Resilience",
+      "category": "risk",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1573497491208-6b1acb260507",
+      "summary": "Keep critical services running through disruption with business impact analysis, continuity plans and tested responses.",
+      "overview": "Power cuts, cyber attacks, pandemics and supplier failures all test an organisation's resilience. This programme takes participants through business impact analysis, continuity strategies, crisis management and exercising plans, aligned with ISO 22301 principles.",
+      "audience": ["Risk and continuity managers", "Operations and IT managers", "Facilities and security managers", "Internal auditors"],
+      "outcomes": [
+        "Conduct a business impact analysis (BIA)",
+        "Set recovery time and point objectives",
+        "Develop practical continuity strategies and plans",
+        "Set up crisis management and communication",
+        "Design and run exercises",
+        "Audit and improve continuity arrangements"
+      ],
+      "modules": [
+        {"title": "Resilience fundamentals", "topics": ["Business continuity vs disaster recovery", "ISO 22301 overview", "Regulatory expectations"]},
+        {"title": "Business impact analysis", "topics": ["Identifying critical activities", "RTOs and RPOs", "Dependencies and single points of failure"]},
+        {"title": "Continuity strategies", "topics": ["People, premises, technology and suppliers", "Cost-effective options", "IT disaster recovery"]},
+        {"title": "Plans and crisis management", "topics": ["Writing usable plans", "Crisis teams and escalation", "Communicating in a crisis"]},
+        {"title": "Exercising and improving", "topics": ["Tabletop and live exercises", "Lessons learned", "Auditing continuity"]}
+      ],
+      "sessions": [
+        {"start": "2027-03-30", "mode": "Virtual", "location": "Live online"},
+        {"start": "2027-06-22", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "board-effectiveness-governance",
+      "title": "Board Effectiveness & Corporate Governance",
+      "category": "board",
+      "level": "Executive",
+      "days": 1,
+      "formats": ["In-person", "In-house"],
+      "image": "photo-1573164574572-cb89e39749b4",
+      "summary": "Help boards move from compliance to oversight that creates value: roles, committees, risk oversight and board evaluation.",
+      "overview": "Good governance is more than following a code. This executive workshop helps directors and senior leaders sharpen board roles, strengthen committee oversight of risk and audit, ask better questions of management and evaluate board performance. Often delivered in-house as a board retreat.",
+      "audience": ["Board directors and trustees", "Audit and risk committee members", "CEOs and executive teams", "Company secretaries"],
+      "outcomes": [
+        "Clarify board and management roles",
+        "Strengthen audit and risk committee oversight",
+        "Ask effective questions about risk and performance",
+        "Apply governance codes in practice",
+        "Oversee strategy, culture and ethics",
+        "Plan a board evaluation"
+      ],
+      "modules": [
+        {"title": "Governance that adds value", "topics": ["Governance codes and principles", "Board vs management roles", "Duties of directors"]},
+        {"title": "Overseeing strategy and risk", "topics": ["Risk appetite and oversight", "The board's view of ERM", "Asking the right questions"]},
+        {"title": "Audit and risk committees", "topics": ["Committee charters and composition", "Working with internal and external audit", "Effective committee meetings"]},
+        {"title": "Culture, ethics and performance", "topics": ["Setting the tone at the top", "Board information and reporting", "Board evaluation"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-25", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "healthcare-risk-patient-safety",
+      "title": "Healthcare Risk Management & Patient Safety",
+      "category": "health",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "In-house"],
+      "image": "photo-1590650516494-0c8e4a4dd67e",
+      "summary": "Build a high-reliability hospital: turn risk management into everyday clinical and operational behaviour.",
+      "overview": "In healthcare, risk management is ultimately about protecting lives. This programme helps hospital leaders and staff move beyond policies and registers to practical risk management: learning from near misses, psychological safety, clinical governance and an integrated view of clinical, operational, technology and financial risk.",
+      "audience": ["Hospital managers and executives", "Clinical and nursing leaders", "Quality and patient safety officers", "Risk, compliance and audit staff in healthcare"],
+      "outcomes": [
+        "Apply ERM in a hospital setting",
+        "Understand High Reliability Organisation principles",
+        "Learn from incidents and near misses",
+        "Build psychological safety and reporting culture",
+        "Link clinical governance with enterprise risk",
+        "Track patient safety risk indicators"
+      ],
+      "modules": [
+        {"title": "Risk in healthcare", "topics": ["Clinical, operational, financial and technology risks", "Interconnected risk chains", "Regulatory and accreditation expectations"]},
+        {"title": "High Reliability Organisations", "topics": ["Preoccupation with failure", "Sensitivity to operations", "Deference to expertise"]},
+        {"title": "Learning from incidents", "topics": ["Incident and near-miss reporting", "Root-cause analysis", "Human factors and just culture"]},
+        {"title": "Clinical governance and ERM", "topics": ["The Three Lines Model in hospitals", "Risk ownership on the ward", "Medication, infection and equipment risk"]},
+        {"title": "Measuring safety", "topics": ["Patient safety indicators", "Risk dashboards for hospital leaders", "Sustaining improvement"]}
+      ],
+      "sessions": [
+        {"start": "2027-03-04", "mode": "In-person", "location": "Nairobi"}
+      ]
+    },
+    {
+      "slug": "budgeting-forecasting-reporting",
+      "title": "Budgeting, Forecasting & Management Reporting",
+      "category": "finance",
+      "level": "Intermediate",
+      "days": 2,
+      "formats": ["In-person", "Virtual", "In-house"],
+      "image": "photo-1611432579402-7037e3e2c1e4",
+      "summary": "Build budgets that drive performance, forecasts you can trust and management reports that support decisions.",
+      "overview": "Finance teams spend weeks on budgets that are out of date by March. This practical programme covers driver-based budgeting, rolling forecasts, cash flow planning and management reports that busy executives actually use, with Excel templates participants take home.",
+      "audience": ["Finance managers and accountants", "Budget holders and department heads", "Business analysts", "SME owners and managers"],
+      "outcomes": [
+        "Build driver-based budgets",
+        "Use rolling forecasts and scenarios",
+        "Plan and monitor cash flow",
+        "Analyse variances meaningfully",
+        "Design concise management reports and dashboards",
+        "Link financial and operational KPIs"
+      ],
+      "modules": [
+        {"title": "Purpose of budgeting", "topics": ["Budgeting approaches compared", "Linking budgets to strategy", "Common budgeting pitfalls"]},
+        {"title": "Building the budget", "topics": ["Driver-based models", "Revenue and cost drivers", "Capital budgeting basics"]},
+        {"title": "Forecasting", "topics": ["Rolling forecasts", "Scenario and sensitivity analysis", "Cash flow forecasting"]},
+        {"title": "Performance analysis", "topics": ["Variance analysis", "KPIs and balanced scorecards", "Cost control"]},
+        {"title": "Management reporting", "topics": ["Reports that support decisions", "Dashboards in Excel", "Presenting to executives and boards"]}
+      ],
+      "sessions": [
+        {"start": "2027-02-09", "mode": "In-person", "location": "Nairobi"},
+        {"start": "2027-05-18", "mode": "Virtual", "location": "Live online"}
+      ]
+    }
+  ]
+}
