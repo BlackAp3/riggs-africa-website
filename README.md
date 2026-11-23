@@ -60,7 +60,7 @@ sitemap.xml, robots.txt  for Google
 Do not hand-edit the generated files above; they are overwritten on every build.
 
 ### Bookings
-- Prices are not shown: fees are quoted after booking, based on organisation type and group size.
+- Prices are not shown on the site: fees are sent when Riggs confirms a booking. (Do not explain on the site how fees are set.)
 - Until a form service is connected, "Send booking request" opens the visitor's email app with the booking
   filled in (to info@riggsafrica.com), shows a reference number, and offers WhatsApp as a backup.
 - To receive bookings directly, create a Formspree form and replace `YOUR_FORM_ID` in `tools/build.py`

@@ -187,7 +187,7 @@ def card(c):
 HOW = '''<ol class="how">
   <li><b>1</b><div><h3>Choose a course &amp; date</h3><p>Pick a public session, or ask for in-house dates for your team.</p></div></li>
   <li><b>2</b><div><h3>Send your booking</h3><p>Tell us who is attending. It takes about two minutes.</p></div></li>
-  <li><b>3</b><div><h3>We confirm &amp; share fees</h3><p>Fees depend on organisation type and group size, so we quote you directly.</p></div></li>
+  <li><b>3</b><div><h3>We confirm &amp; share fees</h3><p>We confirm your place and send you the fees and joining details.</p></div></li>
   <li><b>4</b><div><h3>Attend &amp; apply</h3><p>Practical sessions, templates to take home and a Riggs Africa certificate of completion.</p></div></li>
 </ol>'''
 
@@ -307,7 +307,7 @@ def course_page(c, data):
           </div>
         </section>
         <section class="block reveal"><h2>Questions</h2>
-          <details class="faq"><summary>How much does the course cost?</summary><p>Fees depend on whether you're booking as an individual, a startup or SME, a corporate or a public institution, and on how many people attend. Book a slot and we'll send you a quote — there's no payment at the booking stage.</p></details>
+          <details class="faq"><summary>How much does the course cost?</summary><p>Book a slot and we'll send you the fees when we confirm your booking. There's no payment at the booking stage.</p></details>
           <details class="faq"><summary>Can you run this course for our team only?</summary><p>Yes. Any course can be delivered in-house at your premises or online, on dates that suit you, and tailored to your sector. <a href="/book?course={c['slug']}&amp;session=inhouse">Request in-house dates</a>.</p></details>
           <details class="faq"><summary>Are the dates confirmed?</summary><p>Public session dates are provisional until we confirm your booking. If a session moves, we'll let you know and offer the next available date.</p></details>
           <details class="faq"><summary>What do participants need to bring?</summary><p>A notebook and an open mind. For practical sessions such as data analytics, please bring a laptop. Virtual sessions need a stable internet connection.</p></details>
@@ -320,7 +320,7 @@ def course_page(c, data):
           <h2>Upcoming sessions</h2>
           <p class="prov">Provisional dates · confirmed when you book</p>
           <ul class="sess-list">{sess_html}<li><label class="sess"><input type="radio" name="session" value="inhouse"{'' if sessions else ' checked'}><span class="sess-box"><span class="sess-date">{ICON['user']}In-house for my team</span><span class="sess-meta">Your dates · your venue or online</span></span></label></li></ul>
-          <div class="fee"><b>Fees</b><span>Shared after booking — they depend on your organisation type and group size.</span></div>
+          <div class="fee"><b>Fees</b><span>Shared when we confirm your booking.</span></div>
           <button type="submit" class="btn btn-teal btn-block">Book a slot <span aria-hidden="true">→</span></button>
           <a class="btn btn-wa btn-block" href="https://wa.me/{WA}?text={wa}" target="_blank" rel="noopener">Ask a question on WhatsApp</a>
         </form>
@@ -359,8 +359,8 @@ def book(data, cats):
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/courses">Courses</a><span aria-hidden="true">/</span><span>Book</span></nav>
         <h1>Book a course</h1>
-        <p class="lead">Reserve your place in about two minutes. No payment now — we'll confirm your booking and send fees for your organisation.</p>
-        <ol class="steps-mini"><li class="on"><b>1</b>Choose course</li><li><b>2</b>Your details</li><li><b>3</b>We confirm &amp; quote</li></ol>
+        <p class="lead">Reserve your place in about two minutes. No payment now — we'll confirm your booking and send you the fees.</p>
+        <ol class="steps-mini"><li class="on"><b>1</b>Choose course</li><li><b>2</b>Your details</li><li><b>3</b>We confirm</li></ol>
       </div>
     </section>
 
@@ -407,21 +407,21 @@ def book(data, cats):
             <div><dt>Booking as</dt><dd id="sumAs">—</dd></div>
             <div><dt>Fees</dt><dd>Shared after booking</dd></div>
           </dl>
-          <p class="bsum-note">No payment now. We'll confirm within one working day and send a quote for your organisation.</p>
+          <p class="bsum-note">No payment now. We'll confirm within one working day and send you the fees.</p>
         </div>
       </aside>
 
       <section class="bdone" id="bDone" hidden tabindex="-1">
         <div class="done-ic">{ICON['check']}</div>
         <h2>Booking request ready</h2>
-        <p>Your reference is <b id="doneRef">—</b>. We'll confirm your place and send fees for your organisation.</p>
+        <p>Your reference is <b id="doneRef">—</b>. We'll confirm your place and send you the fees.</p>
         <p class="muted" id="doneHow"></p>
-        <ol class="next-steps"><li>We check availability for your session.</li><li>We email or call you with a quote and joining details.</li><li>Your place is secured once you confirm.</li></ol>
+        <ol class="next-steps"><li>We check availability for your session.</li><li>We email or call you with the fees and joining details.</li><li>Your place is secured once you confirm.</li></ol>
         <div class="actions"><a class="btn btn-wa" id="doneWa" href="https://wa.me/{WA}" target="_blank" rel="noopener">Also send on WhatsApp</a><a class="btn btn-outline" href="/courses">Back to courses</a></div>
       </section>
     </div>
     <script type="application/json" id="courseData">{json.dumps(payload).replace("</", "<\\/")}</script>'''
-    return page("Book a course | Riggs Africa Solutions", "Book a place on a Riggs Africa training course. No payment now — we confirm and share fees for your organisation.",
+    return page("Book a course | Riggs Africa Solutions", "Book a place on a Riggs Africa training course. No payment now — we confirm your booking and share the fees.",
                 "/book", body, "", ("/assets/js/main.js", "/assets/js/book.js"))
 
 
