@@ -104,7 +104,7 @@
   }
 
   /* Reveal on scroll + stagger grids */
-  document.querySelectorAll('.prog-grid, .ways, .sectors, .offices, .cgrid, .how, .deliver').forEach(function (g) {
+  document.querySelectorAll('.prog-grid, .ways, .sectors, .offices, .cgrid, .how, .deliver, .v3-cgrid, .v3-phases, .v3-ways, .v3-ind, .v3-why-list').forEach(function (g) {
     g.classList.add('stagger');
     Array.prototype.forEach.call(g.children, function (el, i) { el.style.setProperty('--d', (i * 0.05) + 's'); });
   });
@@ -143,7 +143,7 @@
         links.forEach(function (a) { var h = a.getAttribute('href'); a.classList.toggle('active', h.slice(h.indexOf('#')) === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    if (!document.body.classList.contains('sub')) ['programmes', 'ways', 'industries', 'contact'].forEach(function (id) { var s = $(id); if (s) spy.observe(s); });
+    if (!document.body.classList.contains('sub')) ['programmes', 'ways', 'about', 'industries', 'callback'].forEach(function (id) { var s = $(id); if (s) spy.observe(s); });
   } else {
     watch.forEach(function (el) { el.classList.add('in', 'done'); });
   }
@@ -152,6 +152,9 @@
   var pill = $('cbBar');
   if (pill && $('callback') && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) { pill.classList.toggle('hide', entries[0].isIntersecting); }, { threshold: 0.15 }).observe($('callback'));
+    /* ...and stays out of the way while the hero (which has its own buttons) is on screen */
+    var hero = document.querySelector('.v3-hero');
+    if (hero) new IntersectionObserver(function (entries) { pill.classList.toggle('away', entries[0].isIntersecting); }, { rootMargin: '-60% 0px 0px 0px' }).observe(hero);
   }
 
   /* Footer year */

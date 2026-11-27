@@ -426,35 +426,70 @@ def book(data, cats):
 
 
 FEATURED = [  # shown on the home page under "Programmes in demand"
-    ("enterprise-risk-management-practical-approach", "In-house"),
-    ("risk-based-internal-auditing", "Public"),
-    ("ai-for-business", "Virtual"),
-    ("board-effectiveness-governance", "Board"),
-    ("iso-31000-risk-management", "Public"),
-    ("fraud-risk-management", "Public"),
+    "enterprise-risk-management-practical-approach",
+    "risk-based-internal-auditing",
+    "ai-for-business",
+    "board-effectiveness-governance",
+    "iso-31000-risk-management",
+    "fraud-risk-management",
 ]
+
+CAT_SHORT = {"risk": "Risk", "audit": "Audit", "tech": "Technology", "finance": "Finance", "board": "Boards", "health": "Healthcare"}
+CAT_ICON = {
+    "risk": '<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/>',
+    "audit": '<path d="M9 5h10v14H5V9z"/><path d="M9 5v4H5"/><path d="M9 14l2 2 4-4"/>',
+    "tech": '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 2v4M14 2v4M10 18v4M14 18v4M2 10h4M2 14h4M18 10h4M18 14h4"/>',
+    "finance": '<path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/>',
+    "board": '<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/>',
+    "health": '<path d="M12 20s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.5-7 10-7 10z"/>',
+}
 
 
 def home_programmes(data):
     by = {c["slug"]: c for c in data["courses"]}
     out = []
-    for slug, badge in FEATURED:
+    for slug in FEATURED:
         c = by[slug]
         s = c["sessions_out"][0] if c["sessions_out"] else None
-        when = f"{s['dates']} · {s['location']}" if s else "On request"
-        cls = "badge badge-cu" if badge == "Board" else "badge"
-        out.append(f'            <a class="prog" href="/courses/{slug}"><div class="ph"><img src="{img(c["image"], 600, 70)}" alt="" loading="lazy"><span class="{cls}">{badge}</span></div><div class="prog-body"><h3>{e(c["title"])}</h3><p><span>Next</span>{e(when)}</p></div></a>')
+        when = f"{s['dates']} · {s['location']}" if s else "Dates on request"
+        out.append(f'''          <a class="v3-cc" data-cat="{c['category']}" href="/courses/{slug}">
+            <div class="v3-cc-top"><span class="v3-cc-tag">{CAT_SHORT[c['category']]}</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true">{CAT_ICON[c['category']]}</svg></span></div>
+            <div class="v3-cc-body"><h3>{e(c["title"])}</h3><p>{e(c["summary"])}</p>
+              <ul class="v3-cc-meta"><li>{c['duration']}</li><li>{e(' · '.join(c['formats'][:2]))}</li><li>{e(c['level'])}</li></ul>
+              <span class="v3-cc-next"><b>Next</b>{e(when)}</span></div>
+          </a>''')
     return "\n".join(out)
+
+
+def home_next(data):
+    today = dt.date.today()
+    best = None
+    for c in data["courses"]:
+        for s in c["sessions_out"]:
+            if s["start"] >= today and (best is None or s["start"] < best[1]["start"]):
+                best = (c, s)
+    if not best:
+        return '          <a class="v3-next" href="/courses"><span class="v3-next-k">Training</span><strong>14 courses in 6 fields</strong><span class="v3-next-go">Browse courses →</span></a>'
+    c, s = best
+    return (f'          <a class="v3-next" href="/courses/{c["slug"]}"><span class="v3-next-k">Next intake</span>'
+            f'<strong>{e(c["title"])}</strong><span class="v3-next-d">{e(s["dates"])} · {e(s["location"])}</span>'
+            f'<span class="v3-next-go">Reserve a seat →</span></a>')
+
+
+def _splice(s, start, end, body):
+    a = s.index(start)
+    a = s.index("-->", a) + 3
+    b = s.index(end)
+    return s[:a] + "\n" + body + "\n" + s[b:]
 
 
 def patch_home(data):
     path = os.path.join(ROOT, "index.html")
     with open(path, encoding="utf-8") as f:
         s = f.read()
-    a = s.index("<!-- PROGRAMMES:START")
-    a = s.index("-->", a) + 3
-    b = s.index("<!-- PROGRAMMES:END -->")
-    s = s[:a] + "\n" + home_programmes(data) + "\n" + s[b:]
+    s = _splice(s, "<!-- PROGRAMMES:START", "<!-- PROGRAMMES:END -->", home_programmes(data))
+    if "<!-- NEXT:START" in s:
+        s = _splice(s, "<!-- NEXT:START", "<!-- NEXT:END -->", home_next(data))
     with open(path, "w", encoding="utf-8") as f:
         f.write(s)
 

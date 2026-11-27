@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
@@ -41,148 +41,203 @@
         <a href="/courses">Courses</a>
         <a href="#ways">Consulting</a>
         <a href="#industries">Industries</a>
-        <a href="#contact">About</a>
+        <a href="#about">About</a>
+        <a href="#callback">Contact</a>
         <a href="/book" class="btn btn-teal nav-cta">Book a course</a>
       </nav>
       <div class="header-tools">
-        <a href="/book" class="btn btn-teal desk-only">Book a course</a>
+        <a href="tel:+254716845482" class="v3-tel desk-only">+254 716 845 482</a>
+        <a href="/book" class="btn btn-ink desk-only">Book a course</a>
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO + OFFERS CAROUSEL -->
-    <section class="hero" id="top">
-      <img class="hero-map" src="/assets/img/africa-map.svg" alt="" aria-hidden="true">
-      <div class="wrap hero-head">
-        <div class="hero-copy">
-          <span class="eyebrow eyebrow-copper"><span class="dot"></span>Consulting · Assurance · Training · Nairobi</span>
-          <h1>Strengthen governance. Manage risk. <span class="accent">Grow with confidence.</span></h1>
-        </div>
-        <div class="hero-side">
-          <p class="lead">Practical advisory, independent assurance and training that teams use the next morning — from strategy through implementation.</p>
-          <div class="actions">
-            <a class="btn btn-teal" href="#callback">Request a call back <span aria-hidden="true">→</span></a>
-            <a class="btn btn-outline" href="/courses">Browse courses</a>
+    <!-- HERO -->
+    <section class="v3-hero" id="top">
+      <div class="wrap v3-hero-grid">
+        <div class="v3-hero-copy">
+          <span class="v3-kicker">Governance · Risk · Internal audit · Training</span>
+          <h1>Strengthen governance. Manage risk. <span class="cu">Grow with confidence.</span></h1>
+          <p class="v3-lead">Practical consulting and hands-on courses for boards, risk teams and auditors across Africa, from our base in Nairobi.</p>
+          <form class="v3-search" role="search" action="/courses" method="get">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg>
+            <label for="heroQ" class="sr">Search courses</label>
+            <input id="heroQ" name="q" type="search" placeholder="Search courses, e.g. ISO 31000" autocomplete="off">
+            <button type="submit" class="btn btn-ink">Find a course</button>
+          </form>
+          <div class="v3-popular"><span>Popular:</span><a href="/courses?cat=risk">Enterprise risk</a><a href="/courses?cat=audit">Internal audit</a><a href="/courses/ai-for-business">AI for business</a><a href="/courses?cat=board">Board governance</a></div>
+          <div class="v3-trust">
+            <span class="v3-trust-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <p><b>Led by a CPA · CISA · ERM (IRM)</b> with 20+ years in governance, risk and audit</p>
           </div>
         </div>
-      </div>
-
-      <div class="carousel" aria-roledescription="carousel" aria-label="Featured services and programmes">
-        <div class="track" id="banTrack">
-          <a class="offer" href="/courses/enterprise-risk-management-foundations"><div class="ph"><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">In-house training</span><h2>Enterprise Risk Management</h2><p>A practical, two-level programme that embeds risk thinking in everyday decisions.</p><span class="more">Book for your team →</span></div></a>
-          <a class="offer" href="#callback"><div class="ph"><img src="https://images.unsplash.com/photo-1573496267526-08a69e46a409?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Assurance</span><h2>Outsourced Internal Audit</h2><p>Independent, risk-based assurance — end to end or alongside your team.</p><span class="more">Find out more →</span></div></a>
-          <a class="offer" href="/courses/board-effectiveness-governance"><div class="ph"><img src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Board advisory</span><h2>Board Effectiveness</h2><p>Workshops that move boards from compliance to oversight that drives value.</p><span class="more">Plan a workshop →</span></div></a>
-          <a class="offer" href="/courses/ai-for-business"><div class="ph"><img src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Digital &amp; AI</span><h2>AI for Business</h2><p>Where AI creates value today — and which risks must be governed.</p><span class="more">See the programme →</span></div></a>
-          <a class="offer" href="/courses/iso-31000-risk-management"><div class="ph"><img src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Training</span><h2>ISO 31000 &amp; COSO</h2><p>Frameworks your managers can apply the next morning.</p><span class="more">View course →</span></div></a>
-          <a class="offer" href="#callback"><div class="ph"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Advisory</span><h2>Digital Transformation Roadmaps</h2><p>Governed technology change, from strategy to adoption.</p><span class="more">Talk to us →</span></div></a>
-          <a class="offer" href="/courses/fraud-risk-management"><div class="ph"><img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=800&q=75" alt=""></div><div class="offer-body"><span class="tag">Investigations</span><h2>Fraud Risk &amp; Investigations</h2><p>Detect and prevent fraud before it becomes a loss.</p><span class="more">Find out more →</span></div></a>
-        </div>
-        <div class="wrap car-ctrl">
-          <div class="progress" aria-hidden="true"><i id="banBar"></i></div>
-          <span class="count" id="banCount" aria-hidden="true">01 / 07</span>
-          <button type="button" class="arrow" id="banPrev" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button type="button" class="arrow" id="banNext" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="v3-hero-visual">
+          <div class="ph v3-photo duo"><img src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?auto=format&fit=crop&w=1100&q=75" alt="A facilitator leading a training workshop" fetchpriority="high"></div>
+<!-- NEXT:START (generated by tools/build.py) -->
+          <a class="v3-next" href="/courses/enterprise-risk-management-foundations"><span class="v3-next-k">Next intake</span><strong>Enterprise Risk Management: Foundations</strong><span class="v3-next-d">19–20 Jan 2027 · Nairobi</span><span class="v3-next-go">Reserve a seat →</span></a>
+<!-- NEXT:END -->
+          <div class="v3-count"><b data-count="14">14</b><span>courses in 6 fields</span></div>
         </div>
       </div>
     </section>
 
     <!-- FRAMEWORKS -->
-    <section class="frameworks" aria-label="Frameworks and standards">
-      <div class="wrap fw-inner">
-        <p class="fw-label">Built on recognised frameworks</p>
-        <ul class="fw-list">
-          <li>ISO 31000</li><li>COSO ERM</li><li>COSO Internal Control</li><li>Global Internal Audit Standards</li><li>Three Lines Model</li>
-        </ul>
-        <p class="fw-led">Led by a <b>CPA · CISA · ERM (IRM)</b></p>
+    <section class="v3-fw" aria-label="Frameworks and standards">
+      <div class="wrap v3-fw-inner">
+        <span class="v3-fw-k">We work to</span>
+        <ul><li>ISO 31000</li><li>COSO ERM</li><li>COSO Internal Control</li><li>Global Internal Audit Standards</li><li>Three Lines Model</li></ul>
       </div>
     </section>
 
-    <!-- PROGRAMMES | WAYS TO WORK -->
-    <section class="section">
-      <div class="wrap split1">
-        <div id="programmes" class="reveal">
-          <div class="sec-head"><div><span class="eyebrow">Training</span><h2>Programmes in demand</h2></div><a class="link" href="/courses">All 14 courses →</a></div>
-                    <div class="prog-grid">
-<!-- PROGRAMMES:START (generated by tools/build.py) -->
-            <a class="prog" href="/courses/enterprise-risk-management-practical-approach"><div class="ph"><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge">In-house</span></div><div class="prog-body"><h3>Enterprise Risk Management: A Practical Approach (Level 2)</h3><p><span>Next</span>16–17 Feb 2027 · Nairobi</p></div></a>
-            <a class="prog" href="/courses/risk-based-internal-auditing"><div class="ph"><img src="https://images.unsplash.com/photo-1573164574397-dd250bc8a598?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge">Public</span></div><div class="prog-body"><h3>Risk-Based Internal Auditing</h3><p><span>Next</span>26–28 Jan 2027 · Nairobi</p></div></a>
-            <a class="prog" href="/courses/ai-for-business"><div class="ph"><img src="https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge">Virtual</span></div><div class="prog-body"><h3>AI for Business: Value &amp; Governance</h3><p><span>Next</span>28 Jan 2027 · Live online</p></div></a>
-            <a class="prog" href="/courses/board-effectiveness-governance"><div class="ph"><img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge badge-cu">Board</span></div><div class="prog-body"><h3>Board Effectiveness &amp; Corporate Governance</h3><p><span>Next</span>25 Feb 2027 · Nairobi</p></div></a>
-            <a class="prog" href="/courses/iso-31000-risk-management"><div class="ph"><img src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge">Public</span></div><div class="prog-body"><h3>ISO 31000 Risk Management in Practice</h3><p><span>Next</span>9–11 Feb 2027 · Live online</p></div></a>
-            <a class="prog" href="/courses/fraud-risk-management"><div class="ph"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span class="badge">Public</span></div><div class="prog-body"><h3>Fraud Risk Management &amp; Investigations</h3><p><span>Next</span>2–3 Feb 2027 · Nairobi</p></div></a>
-<!-- PROGRAMMES:END -->
-          </div>
-        </div>
-        <div id="ways" class="ways-col reveal">
-          <div class="sec-head"><div><span class="eyebrow">Consulting</span><h2>Ways to work with us</h2></div></div>
-          <ul class="ways">
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 12h18"/></svg></span><div><h3>Outsourced</h3><p>Internal audit delivered end to end by our team.</p></div></li>
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><circle cx="15.5" cy="8" r="3"/><path d="M3 20c0-3 2.5-5.5 5.5-5.5S14 17 14 20M10 20c0-3 2.5-5.5 5.5-5.5S21 17 21 20"/></svg></span><div><h3>Co-sourced</h3><p>Our specialists join and strengthen your team.</p></div></li>
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11z"/><path d="M9 20v-6h6v6"/></svg></span><div><h3>Project advisory</h3><p>Defined scope, deliverables and timeline.</p></div></li>
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c3 2.5 9 2.5 12 0v-5"/></svg></span><div><h3>In-house training</h3><p>Programmes delivered at your premises.</p></div></li>
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M10 9l4 2-4 2z"/></svg></span><div><h3>Virtual &amp; hybrid</h3><p>Live online sessions for dispersed teams.</p></div></li>
-            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19h18M5 19v-7h14v7M8 12V8h8v4"/></svg></span><div><h3>Board workshops</h3><p>Executive retreats and board sessions.</p></div></li>
-          </ul>
-          <div class="method">
-            <p class="method-k">Every engagement follows one method</p>
-            <ol><li><b>1</b>Understand</li><li><b>2</b>Assess</li><li><b>3</b>Design</li><li><b>4</b>Implement</li><li class="m-cu"><b>5</b>Sustain</li></ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INDUSTRIES | TESTIMONIALS -->
-    <section class="section section-soft" id="industries">
-      <div class="wrap split2">
-        <div class="reveal">
-          <div class="sec-head"><div><span class="eyebrow">Industries</span><h2>Solutions by industry</h2></div><span class="muted">16 industries · 3 sectors</span></div>
-          <div class="sectors">
-            <article class="sector"><div class="ph sector-photo"><img src="https://images.unsplash.com/photo-1611348524140-53c9a25263d6?auto=format&fit=crop&w=700&q=70" alt="Nairobi city skyline" loading="lazy"><h3>Public, development &amp; social</h3></div><div class="pills"><span>Government</span><span>NGOs</span><span>Development orgs</span><span>Education</span><span>Healthcare</span></div></article>
-            <article class="sector"><div class="ph sector-photo"><img src="https://images.unsplash.com/photo-1611144727915-ef30a08aaeb3?auto=format&fit=crop&w=700&q=70" alt="High-rise office buildings" loading="lazy"><h3>Financial services</h3></div><div class="pills"><span>Banking</span><span>Insurance</span><span>SACCOs</span><span>Microfinance</span></div></article>
-            <article class="sector"><div class="ph sector-photo"><img src="https://images.unsplash.com/photo-1781504798134-31600e8579ba?auto=format&fit=crop&w=700&q=70" alt="Modern commercial buildings" loading="lazy"><h3>Commercial &amp; industrial</h3></div><div class="pills"><span>Manufacturing</span><span>Retail</span><span>Hospitality</span><span>Professional services</span><span>Telecoms</span><span>Energy</span><span>Real estate</span></div></article>
-          </div>
-        </div>
-        <div class="testi-col reveal">
-          <!-- Replace with real, client-approved testimonials before launch -->
-          <figure class="testi" id="testi">
-            <svg class="qmark" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V18C0 8 5 2 15 0l2 4c-6 2-8 6-8 10h8v18zm23 0V18c0-10 5-16 15-18l2 4c-6 2-8 6-8 10h8v18z"/></svg>
-            <div class="testi-body" aria-live="polite">
-              <blockquote id="tQuote">[Client testimonial — what Riggs Africa delivered, in one or two sentences.]</blockquote>
-              <figcaption><b id="tName">[Client name], [Title]</b><span id="tOrg">[Client organisation]</span></figcaption>
-            </div>
-            <div class="testi-ctrl">
-              <div class="dots" id="tPips" aria-hidden="true"></div>
-              <button type="button" class="arrow arrow-light" id="tPrev" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-              <button type="button" class="arrow arrow-light" id="tNext" aria-label="Next testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
-            </div>
-          </figure>
-          <dl class="stats">
-            <div><dt data-count="6">6</dt><dd>service lines</dd></div>
-            <div><dt data-count="16">16</dt><dd>industries served</dd></div>
-            <div><dt data-count="20" data-suffix="+">20+</dt><dd>years' leadership experience</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- REQUEST A CALL BACK -->
-    <section class="section" id="callback">
+    <!-- COURSES -->
+    <section class="v3-sec" id="programmes">
       <div class="wrap">
-        <div class="cb reveal">
-          <img class="cb-map" src="/assets/img/africa-map.svg" alt="" aria-hidden="true">
-          <div class="cb-copy">
-            <span class="eyebrow">Request a call back</span>
-            <h2>Let's talk about what you need.</h2>
-            <p>Leave your details and an advisor will call you back. Prefer to talk now?</p>
-            <ul class="cb-list">
+        <div class="v3-head reveal">
+          <div><span class="v3-kicker">Training</span><h2>Programmes in demand</h2><p>Public courses in Nairobi and online, or delivered in-house for your team.</p></div>
+          <a class="btn btn-line" href="/courses">View all 14 courses <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="v3-chips" aria-label="Browse by field">
+          <a href="/courses" class="on">All</a><a href="/courses?cat=risk">Risk</a><a href="/courses?cat=audit">Audit</a><a href="/courses?cat=tech">Technology</a><a href="/courses?cat=finance">Finance</a><a href="/courses?cat=board">Boards</a><a href="/courses?cat=health">Healthcare</a>
+        </div>
+        <div class="v3-cgrid">
+<!-- PROGRAMMES:START (generated by tools/build.py) -->
+          <a class="v3-cc" data-cat="risk" href="/courses/enterprise-risk-management-practical-approach">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Risk</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span></div>
+            <div class="v3-cc-body"><h3>Enterprise Risk Management: A Practical Approach (Level 2)</h3><p>Move from theory to practice: embed ERM into planning, decisions and performance with an implementation roadmap and KPIs.</p>
+              <ul class="v3-cc-meta"><li>2 days</li><li>In-person · In-house</li><li>Intermediate</li></ul>
+              <span class="v3-cc-next"><b>Next</b>16–17 Feb 2027 · Nairobi</span></div>
+          </a>
+          <a class="v3-cc" data-cat="audit" href="/courses/risk-based-internal-auditing">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Audit</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h10v14H5V9z"/><path d="M9 5v4H5"/><path d="M9 14l2 2 4-4"/></svg></span></div>
+            <div class="v3-cc-body"><h3>Risk-Based Internal Auditing</h3><p>Plan and deliver audits that focus on the risks that matter, aligned with the Global Internal Audit Standards.</p>
+              <ul class="v3-cc-meta"><li>3 days</li><li>In-person · Virtual</li><li>Intermediate</li></ul>
+              <span class="v3-cc-next"><b>Next</b>26–28 Jan 2027 · Nairobi</span></div>
+          </a>
+          <a class="v3-cc" data-cat="tech" href="/courses/ai-for-business">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Technology</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 2v4M14 2v4M10 18v4M14 18v4M2 10h4M2 14h4M18 10h4M18 14h4"/></svg></span></div>
+            <div class="v3-cc-body"><h3>AI for Business: Value &amp; Governance</h3><p>Where AI creates value today — and the risks leaders must govern. A practical, non-technical day for decision-makers.</p>
+              <ul class="v3-cc-meta"><li>1 day</li><li>In-person · Virtual</li><li>All levels</li></ul>
+              <span class="v3-cc-next"><b>Next</b>28 Jan 2027 · Live online</span></div>
+          </a>
+          <a class="v3-cc" data-cat="board" href="/courses/board-effectiveness-governance">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Boards</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></span></div>
+            <div class="v3-cc-body"><h3>Board Effectiveness &amp; Corporate Governance</h3><p>Help boards move from compliance to oversight that creates value: roles, committees, risk oversight and board evaluation.</p>
+              <ul class="v3-cc-meta"><li>1 day</li><li>In-person · In-house</li><li>Executive</li></ul>
+              <span class="v3-cc-next"><b>Next</b>25 Feb 2027 · Nairobi</span></div>
+          </a>
+          <a class="v3-cc" data-cat="risk" href="/courses/iso-31000-risk-management">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Risk</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span></div>
+            <div class="v3-cc-body"><h3>ISO 31000 Risk Management in Practice</h3><p>Apply the ISO 31000 principles, framework and process to design or strengthen a risk management system that fits your organisation.</p>
+              <ul class="v3-cc-meta"><li>3 days</li><li>In-person · Virtual</li><li>Intermediate</li></ul>
+              <span class="v3-cc-next"><b>Next</b>9–11 Feb 2027 · Live online</span></div>
+          </a>
+          <a class="v3-cc" data-cat="audit" href="/courses/fraud-risk-management">
+            <div class="v3-cc-top"><span class="v3-cc-tag">Audit</span><span class="v3-cc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h10v14H5V9z"/><path d="M9 5v4H5"/><path d="M9 14l2 2 4-4"/></svg></span></div>
+            <div class="v3-cc-body"><h3>Fraud Risk Management &amp; Investigations</h3><p>Prevent, detect and respond to fraud — from fraud risk assessment to running a sound investigation.</p>
+              <ul class="v3-cc-meta"><li>2 days</li><li>In-person · Virtual</li><li>Intermediate</li></ul>
+              <span class="v3-cc-next"><b>Next</b>2–3 Feb 2027 · Nairobi</span></div>
+          </a>
+<!-- PROGRAMMES:END -->
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK (dark band) -->
+    <section class="v3-dark" id="ways">
+      <div class="wrap">
+        <div class="v3-dark-head reveal">
+          <div><span class="v3-kicker on-dark">Consulting</span><h2>One method. Three ways to work with us.</h2></div>
+          <p>Whether we run your internal audit, support your team or train your people, every engagement follows the same five steps.</p>
+        </div>
+        <ol class="v3-phases">
+          <li><b>01</b><h3>Understand</h3><p>Your goals, context and appetite for risk.</p></li>
+          <li><b>02</b><h3>Assess</h3><p>Where you stand today, and the gaps.</p></li>
+          <li><b>03</b><h3>Design</h3><p>Frameworks and controls that fit you.</p></li>
+          <li><b>04</b><h3>Implement</h3><p>Hands-on support and training.</p></li>
+          <li class="last"><b>05</b><h3>Sustain</h3><p>Reviews that keep it working.</p></li>
+        </ol>
+        <div class="v3-ways">
+          <a class="v3-way" href="#callback"><h3>Outsourced internal audit</h3><p>We run the full internal audit function for you, reporting to your board or audit committee.</p><span>Talk to us →</span></a>
+          <a class="v3-way" href="#callback"><h3>Co-sourced support</h3><p>Specialists alongside your own team for IT audit, fraud, ERM or a defined project.</p><span>Talk to us →</span></a>
+          <a class="v3-way" href="/courses"><h3>In-house training</h3><p>Any of our 14 courses delivered at your offices or online, tailored to your sector.</p><span>See the courses →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD CONSULTANT -->
+    <section class="v3-sec" id="about">
+      <div class="wrap v3-lead-grid">
+        <!-- Replace the monogram with Reagan's headshot: <img src="/assets/img/reagan.jpg" alt="Joseph Reagan Barasa"> -->
+        <div class="v3-portrait reveal" aria-hidden="true"><img class="v3-portrait-map" src="/assets/img/africa-map.svg" alt=""><span>JRB</span></div>
+        <div class="v3-lead-copy reveal">
+          <span class="v3-kicker cu">Meet your lead consultant</span>
+          <h2>Joseph Reagan Barasa</h2>
+          <p class="v3-role">[Title], Riggs Africa Solutions Limited</p>
+          <ul class="v3-creds"><li>CPA</li><li>CISA</li><li>ERM (IRM)</li><li>MBA</li><li>BCom</li></ul>
+          <p class="v3-bio">[Short bio, 2–3 sentences, approved by Reagan: his background in risk, audit and governance, the sectors he has served, and why he founded Riggs Africa.]</p>
+          <dl class="v3-stats">
+            <div><dt data-count="20" data-suffix="+">20+</dt><dd>years' experience</dd></div>
+            <div><dt data-count="16">16</dt><dd>industries served</dd></div>
+            <div><dt data-count="6">6</dt><dd>service lines</dd></div>
+          </dl>
+          <a class="v3-arrow-link" href="https://www.linkedin.com/in/joseph-reagan-barasa-mba-bcom-cpa-cisa-erm-irm-76575720/" target="_blank" rel="noopener">View profile on LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO BAND -->
+    <section class="v3-band-wrap" aria-label="Our belief">
+      <div class="wrap">
+        <div class="ph v3-band reveal"><img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1800&q=70" alt="" loading="lazy">
+          <p>Good governance is not paperwork. It is how organisations <span>earn trust</span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="v3-sec" id="industries">
+      <div class="wrap">
+        <div class="v3-head reveal"><div><span class="v3-kicker">Industries</span><h2>Solutions by industry</h2><p>16 industries across three sectors.</p></div></div>
+        <div class="v3-ind">
+          <article><div class="ph duo"><img src="https://images.unsplash.com/photo-1611144727915-ef30a08aaeb3?auto=format&fit=crop&w=800&q=70" alt="High-rise office buildings" loading="lazy"></div><h3>Financial services</h3><p>Banking, insurance, SACCOs and microfinance.</p></article>
+          <article><div class="ph duo cu"><img src="https://images.unsplash.com/photo-1611348524140-53c9a25263d6?auto=format&fit=crop&w=800&q=70" alt="Nairobi city skyline" loading="lazy"></div><h3>Public, development &amp; social</h3><p>Government, NGOs, development organisations, education and healthcare.</p></article>
+          <article><div class="ph duo ink"><img src="https://images.unsplash.com/photo-1781504798134-31600e8579ba?auto=format&fit=crop&w=800&q=70" alt="Modern commercial buildings" loading="lazy"></div><h3>Commercial &amp; industrial</h3><p>Manufacturing, retail, hospitality, telecoms, energy and real estate.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY RIGGS -->
+    <section class="v3-why">
+      <div class="wrap v3-why-grid">
+        <div class="reveal"><span class="v3-kicker">Why Riggs Africa</span><h2>Built for how organisations here actually work.</h2></div>
+        <ul class="v3-why-list">
+          <li><span class="v3-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/></svg></span><h3>Local context</h3><p>Examples, regulations and case studies from East African organisations.</p></li>
+          <li><span class="v3-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><h3>Global standards</h3><p>Everything maps to ISO 31000, COSO and the Global Internal Audit Standards.</p></li>
+          <li><span class="v3-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4l6 6-10 10H4v-6z"/></svg></span><h3>Practical, not theory</h3><p>Templates, tools and exercises your team can use the next Monday.</p></li>
+          <li><span class="v3-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4a3 3 0 010 6M21 20c0-2.5-1.5-4.6-3.5-5.5"/></svg></span><h3>Small groups</h3><p>Small public classes, so every participant gets attention.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CALL BACK (copper band, form + contact) -->
+    <section class="v3-sec" id="callback">
+      <div class="wrap">
+        <div class="v3-cta reveal">
+          <img class="v3-cta-map" src="/assets/img/africa-map.svg" alt="" aria-hidden="true">
+          <div class="v3-cta-copy">
+            <h2>Ready to strengthen your organisation?</h2>
+            <p>Tell us what you need and an advisor will call you back within one working day.</p>
+            <ul class="v3-cta-list">
+              <li><span>Office</span>Nairobi, Kenya · [Street address]</li>
               <li><span>Phone</span><a href="tel:+254716845482">+254 716 845 482</a> · <a href="tel:+254725482972">+254 725 482 972</a></li>
               <li><span>Email</span><a href="mailto:info@riggsafrica.com">info@riggsafrica.com</a></li>
             </ul>
-            <a class="btn btn-wa" href="https://wa.me/254716845482" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a class="btn v3-btn-white" href="https://wa.me/254716845482" target="_blank" rel="noopener">Chat on WhatsApp <span aria-hidden="true">→</span></a>
           </div>
           <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <h3 class="v3-form-title">Request a call back</h3>
             <label>I'd like to discuss
               <select name="service">
                 <option>Enterprise risk management</option><option>Internal audit &amp; assurance</option><option>Governance &amp; board advisory</option>
@@ -200,25 +255,14 @@
               </label>
             </div>
             <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit" class="btn btn-teal btn-block">Send request <span aria-hidden="true">→</span></button>
+            <button type="submit" class="btn btn-ink btn-block">Send request <span aria-hidden="true">→</span></button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
-    <section class="section section-flush" id="contact">
-      <div class="wrap">
-        <div class="sec-head reveal"><div><span class="eyebrow">Contact</span><h2>Find us</h2></div></div>
-        <div class="offices">
-          <div class="office reveal"><span class="k">Head office</span><h3>Nairobi, Kenya</h3><p>Riggs Africa Solutions Limited<br>[Street address, building, floor]</p><a href="tel:+254716845482">+254 716 845 482</a></div>
-          <div class="office office-cu reveal"><span class="k">Leadership</span><h3>Joseph Reagan Barasa</h3><p>[Title] · MBA, BCom, CPA, CISA, ERM (IRM)</p><a href="https://www.linkedin.com/in/joseph-reagan-barasa-mba-bcom-cpa-cisa-erm-irm-76575720/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
-          <div class="office reveal"><span class="k">Training calendar</span><h3>[2027] programmes</h3><p>Public course dates across the year.</p><a href="#callback">Request the calendar →</a></div>
-        </div>
-      </div>
-    </section>
   </main>
+
 
   <footer class="footer">
     <div class="wrap">
@@ -231,7 +275,7 @@
         </div>
         <div class="foot-col"><h4>Explore</h4><a href="/courses">Training courses</a><a href="/book">Book a course</a><a href="#ways">Consulting</a><a href="#industries">Industries</a></div>
         <div class="foot-col"><h4>Services</h4><a href="#ways">Outsourced audit</a><a href="#ways">In-house training</a><a href="#ways">Board workshops</a></div>
-        <div class="foot-col"><h4>Riggs Africa</h4><a href="#contact">About</a><a href="#contact">Leadership</a><a href="#callback">Contact</a></div>
+        <div class="foot-col"><h4>Riggs Africa</h4><a href="#about">About</a><a href="#about">Leadership</a><a href="#callback">Contact</a></div>
         <div class="foot-col"><h4>Get in touch</h4><a href="mailto:info@riggsafrica.com">info@riggsafrica.com</a><a href="tel:+254716845482">+254 716 845 482</a><span>Nairobi, Kenya</span></div>
       </div>
       <div class="foot-bottom"><span>© <span id="year">2026</span> Riggs Africa Solutions Limited</span><span>Privacy policy · Terms</span></div>
