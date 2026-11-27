@@ -33,12 +33,26 @@
         <a href="/courses" class="active" aria-current="page">Courses</a>
         <a href="/#ways">Consulting</a>
         <a href="/#industries">Industries</a>
-        <a href="/#contact">About</a>
+        <a href="/#about">About</a>
+        <a href="/#callback">Contact</a>
         <a href="/book" class="btn btn-teal nav-cta">Book a course</a>
       </nav>
       <div class="header-tools">
-        <a href="/book" class="btn btn-teal desk-only">Book a course</a>
+        <button type="button" class="search-btn" id="searchBtn" aria-label="Search courses" aria-expanded="false" aria-controls="searchPanel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></button>
+        <a href="tel:+254716845482" class="v3-tel desk-only">+254 716 845 482</a>
+        <a href="/book" class="btn btn-ink desk-only">Book a course</a>
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="wrap">
+        <form class="v3-search search-panel-form" role="search" action="/courses" method="get">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg>
+          <label for="siteQ" class="sr">Search courses</label>
+          <input id="siteQ" name="q" type="search" placeholder="Search courses, e.g. ISO 31000" autocomplete="off">
+          <button type="submit" class="btn btn-ink">Search</button>
+        </form>
+        <div class="v3-popular"><span>Popular:</span><a href="/courses?cat=risk">Enterprise risk</a><a href="/courses?cat=audit">Internal audit</a><a href="/courses/ai-for-business">AI for business</a><a href="/courses?cat=board">Board governance</a></div>
       </div>
     </div>
   </header>
@@ -236,7 +250,7 @@
         </div>
         <div class="foot-col"><h4>Training</h4><a href="/courses">All courses</a><a href="/book">Book a course</a><a href="/courses#inhouse">In-house training</a></div>
         <div class="foot-col"><h4>Consulting</h4><a href="/#ways">Ways to work with us</a><a href="/#industries">Industries</a></div>
-        <div class="foot-col"><h4>Riggs Africa</h4><a href="/#contact">About</a><a href="/#contact">Leadership</a><a href="/#callback">Contact</a></div>
+        <div class="foot-col"><h4>Riggs Africa</h4><a href="/#about">About</a><a href="/#about">Leadership</a><a href="/#callback">Contact</a></div>
         <div class="foot-col"><h4>Get in touch</h4><a href="mailto:info@riggsafrica.com">info@riggsafrica.com</a><a href="tel:+254716845482">+254 716 845 482</a><span>Nairobi, Kenya</span></div>
       </div>
       <div class="foot-bottom"><span>© <span id="year">2026</span> Riggs Africa Solutions Limited</span><span>Privacy policy · Terms</span></div>

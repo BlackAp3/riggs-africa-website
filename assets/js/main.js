@@ -34,6 +34,19 @@
     if (nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
   });
 
+  /* Header search */
+  var sBtn = $('searchBtn'), sPanel = $('searchPanel');
+  if (sBtn && sPanel) {
+    function setSearch(open) {
+      sPanel.hidden = !open; sBtn.setAttribute('aria-expanded', String(open));
+      sBtn.setAttribute('aria-label', open ? 'Close search' : 'Search courses');
+      if (open) { setMenu(false); setMega(false); setTimeout(function () { $('siteQ').focus(); }, 30); }
+    }
+    sBtn.addEventListener('click', function (e) { e.stopPropagation(); setSearch(sPanel.hidden); });
+    document.addEventListener('click', function (e) { if (!sPanel.hidden && !e.target.closest('#searchPanel, #searchBtn')) setSearch(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sPanel.hidden) { setSearch(false); sBtn.focus(); } });
+  }
+
   if ($('banTrack')) {
   /* Offers carousel */
   var track = $('banTrack'), bar = $('banBar'), count = $('banCount');
